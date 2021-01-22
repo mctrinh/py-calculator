@@ -101,6 +101,17 @@ def get_variables(num):
 where
 
 * **i** is the position in the input field to insert the digit, is incremented each time to get updated
-with the position to insert the next digit or next operator.
-
+with the position to insert the next digit or next operator.  
 * **num** is the digit.
+
+_4.2. Mapping the operator buttons_
+
+```python
+def get_operation(operator):
+    global i
+    length = len(operator)
+    display.insert(i, operator)
+    i+=length
+```
+
+**get_operation** receives the operator as a parameter which is inserted into the input field at the `i^{th}` position.
