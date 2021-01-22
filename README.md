@@ -112,3 +112,59 @@ def get_operation(operator):
     i+=length
 ```
 **get_operation()** receives the operator as a parameter which is inserted into the input field at the `ith` position.
+
+_4.3. Mapping the AC button_
+
+```python
+def clear_all():
+    display.delete(0,END)
+```
+
+_4.4. Mapping the undo button_
+
+```python
+def undo():
+    entire_string = display.get()
+    if len(entire_string):
+        new_string = entire_string[:-1]
+        clear_all()
+        display.insert(0,new_string)
+    else:
+        clear_all()
+        display.insert(0,"Error")
+```
+`**.get()**` fetches the string present on the input field.  
+If there is really a string, slice out the last character, clear the input field, push
+the new string back to the input field. The new string does not contain the last character.
+
+_4.5. Mapping the '=' button_
+
+```python
+def calculate():
+    entire_string = display.get()
+    try:
+        a = parser.expr(entire_string).compile()
+        result = eval(a)
+        clear_all()
+        display.insert(0,result)
+    except Exception:
+        clear_all()
+        display.insert(0,"Error")
+```
+`**.get()**` fetches the string presented on the input field.  
+In module `parser`, use `**.expr()**` to accept the string as a parameter.
+`**.compile()**` evaluates the string syntax. Then clear the input field and then push the result on it.
+
+_4.6. Mapping the factorial key_
+
+```python
+def fact():
+    entire_string = display.get()
+    try:
+        result = factorial(int(entire_string))
+        clear_all()
+        display.insert(0,result)
+    except Exception:
+    clear_all()
+    display.insert(0,"Error")
+```
