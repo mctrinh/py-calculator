@@ -14,7 +14,7 @@ It is:
 
 ## Steps
 
-1. Step 1: import Tkinter and `factorial` function from `math` module.
+1. Import Tkinter and `factorial` function from `math` module.
 
 ```python
 from tkinter import *
@@ -22,7 +22,7 @@ import parser
 from math import factorial
 ```
 
-2. Step 2: make a window where to accomodate buttoms
+2. Make a window where to accomodate buttoms
 
 ```python
 root = Tk()
@@ -30,7 +30,7 @@ root.title('Py-Calculator')
 root.mainloop()
 ```
 
-3. Step 3: design the buttons
+3. Design the buttons
 
 
 
