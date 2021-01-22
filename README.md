@@ -30,6 +30,8 @@ root.mainloop()
 
 3. Design the buttons
 
+Design buttons for the calculator and arrange them on the app wnidow.
+
 
 
 
