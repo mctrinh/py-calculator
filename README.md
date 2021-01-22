@@ -4,9 +4,7 @@ Build a Python calculator using Tkinter.
 
 ## Tkinter
 
-Tkinter is the most commonly used utility to design the GUI with Python.
-
-It is:
+Tkinter is the most commonly used utility to design the GUI with Python as it is
 
 * fast
 * easy
