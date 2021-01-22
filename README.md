@@ -12,7 +12,7 @@ Tkinter is the most commonly used utility to design the GUI with Python as it is
 
 ## Steps
 
-1. Import Tkinter and `factorial` function from `math` module.
+**1. Import Tkinter and `factorial` function from `math` module.**
 
 ```python
 from tkinter import *
@@ -20,7 +20,7 @@ import parser
 from math import factorial
 ```
 
-2. Make a window where to accomodate buttoms
+**2. Make a window where to accomodate buttoms**
 
 ```python
 root = Tk()
@@ -28,7 +28,7 @@ root.title('Py-Calculator')
 root.mainloop()
 ```
 
-3. Design the buttons
+**3. Design the buttons**
 
 Design buttons for the calculator and arrange them on the app window.
 
@@ -84,7 +84,7 @@ Button(root,text="=",command= lambda :calculate()).grid(columnspan=6, sticky=N+S
 `sticky` defines how to expand the widget when the resulting cell is larger than the widget.  
 `N+E+W+S` means can expand in all directions.  
 
-4. Mapping buttons to their functionalities
+**4. Mapping buttons to their functionalities**
 
 _4.1. Mapping the digits_
 
@@ -97,9 +97,7 @@ def get_variables(num):
     display.insert(i,num)
     i+=1
 ```
-
 where
-
 * **i** is the position in the input field to insert the digit, is incremented each time to get updated
 with the position to insert the next digit or next operator.  
 * **num** is the digit.
@@ -113,5 +111,4 @@ def get_operation(operator):
     display.insert(i, operator)
     i+=length
 ```
-
-**get_operation** receives the operator as a parameter which is inserted into the input field at the `i^{th}` position.
+**get_operation()** receives the operator as a parameter which is inserted into the input field at the `ith` position.
