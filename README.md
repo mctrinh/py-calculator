@@ -71,17 +71,36 @@ Button(root,text="<-",command= lambda :undo()).grid(row=2,column=5, sticky=N+S+E
 Button(root,text="x!", command= lambda: fact()).grid(row=3,column=5, sticky=N+S+E+W)
 Button(root,text=")",command= lambda :get_operation(")")).grid(row=4,column=5, sticky=N+S+E+W)
 Button(root,text="^2",command= lambda :get_operation("**2")).grid(row=5,column=5, sticky=N+S+E+W)
-Button(root,text="^2",command= lambda :get_operation("**2")).grid(row=5,column=5, sticky=N+S+E+W)
 Button(root,text="=",command= lambda :calculate()).grid(columnspan=6, sticky=N+S+E+W)
 ```
 
-`Entry` function helps to make a text input field.
-`.grid()` defines the position associated with the button or input field.
-`root` is the name to refer to the window.
-`text` is text to be displayed in the button.
-`row` is the row index of the button.
-`column` is the column index of the grid.
-`columnspan` is the span or the number of columns.
-`sticky` defines how to expand the widget when the resulting cell is larger than the widget.
-        `N+E+W+S' means can expand in all directions.
+`Entry` function helps to make a text input field.  
+`.grid()` defines the position associated with the button or input field.  
+`root` is the name to refer to the window.  
+`text` is text to be displayed in the button.  
+`row` is the row index of the button.  
+`column` is the column index of the grid.  
+`columnspan` is the span or the number of columns.  
+`sticky` defines how to expand the widget when the resulting cell is larger than the widget.  
+        `N+E+W+S' means can expand in all directions.  
 
+4. Mapping buttons to their functionalities
+
+_4.1. Mapping the digits_
+
+```python
+# i keeps the track of current position on the input text field
+i = 0
+# Receives the digit as parameter and display it on the input field
+def get_variables(num):
+    global i
+    display.insert(i,num)
+    i+=1
+```
+
+where
+
+* **i** is the position in the input field to insert the digit, is incremented each time to get updated
+with the position to insert the next digit or next operator.
+
+* **num** is the digit.
